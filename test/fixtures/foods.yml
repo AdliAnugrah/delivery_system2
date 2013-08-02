@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  nama: MyString
+  type: 
+  price: 9.99
+
+two:
+  nama: MyString
+  type: 
+  price: 9.99
