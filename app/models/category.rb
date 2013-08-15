@@ -1,7 +1,8 @@
 class Category < ActiveRecord::Base
 
-	validates :nama , presence:true
+	validates :name , presence:true
+	 validates_uniqueness_of :name
 	
-  attr_accessible :nama
+  attr_accessible :name
   
 end

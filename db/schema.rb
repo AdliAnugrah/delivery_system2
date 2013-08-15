@@ -11,22 +11,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130801072320) do
+ActiveRecord::Schema.define(:version => 20130815063048) do
 
   create_table "categories", :force => true do |t|
-    t.string   "nama"
+    t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
   create_table "products", :force => true do |t|
     t.string   "name"
-    t.string   "type"
+    t.string   "product_type"
     t.integer  "quantity"
-    t.decimal  "price",      :precision => 10, :scale => 0
+    t.decimal  "price",        :precision => 10, :scale => 0
     t.string   "slug"
-    t.datetime "created_at",                                :null => false
-    t.datetime "updated_at",                                :null => false
+    t.datetime "created_at",                                  :null => false
+    t.datetime "updated_at",                                  :null => false
   end
 
   add_index "products", ["slug"], :name => "index_products_on_slug", :unique => true
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(:version => 20130801072320) do
     t.string   "slug"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "user_id"
   end
 
   add_index "restaurants", ["slug"], :name => "index_restaurants_on_slug", :unique => true
@@ -56,6 +57,8 @@ ActiveRecord::Schema.define(:version => 20130801072320) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.string   "name"
+    t.string   "address"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

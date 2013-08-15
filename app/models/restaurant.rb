@@ -3,6 +3,7 @@ class Restaurant < ActiveRecord::Base
   friendly_id :name, use: :slugged
 
  validates :name , presence:true
+ validates_uniqueness_of :name
 
   attr_accessible :address, :city, :name, :province
 

@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html>
+
+
+
 <head>
   <title>DeliverySystem</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+
+
+<h1  align='center' style='background:#d88539;'>Flash!!!!! Delivery</h1>
+
+
+
+
 </head>
-<body>
+<body style='background-image:url(/assets/background.jpg);'>
+	<div  class='container-fluid' style='border:2px solid white; padding: 10px 5px 10px 5px; margin-top:20px; margin bottom:20px;'>
+
+
+
+<%= render "layouts/menu"%>
 
 <%= yield %>
 

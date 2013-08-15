@@ -1,2 +1,2 @@
-class drink < product
+class Drink < Product
 end
