@@ -1,0 +1,41 @@
+ul.menu{
+	overflow:hidden ;
+	margin-top: 10px;
+
+	li{
+			float: left;
+			list-style-type: none;
+	}
+}
+
+.pic {
+	img {
+		height: 100%;
+		width: 100%;
+	}
+}
+
+#menubar {
+background:#d88539;height: 46px; overflow: hidden;
+border-radius : 10px 10px 10px 10px;
+
+}
+
+#footer{
+
+background-color: #d88539;
+border:1px solid black; width:1265px; height: 100px; float:left; margin: 25px 10px 5px 10px;
+border-radius : 10px 10px 10px 10px;
+
+}
+
+#footertext{
+	width: 720px;
+	margin: 0px auto;
+	margin-top: 20px;
+
+
+	p {
+		text-align: center;
+	}
+}

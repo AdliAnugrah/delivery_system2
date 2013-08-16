@@ -4,6 +4,16 @@
 	<b>Name : </b>
 	<%= @category.name%>
 
+	
+<ul>
+	<% @category.products.each do |product| %>
+		<li>
+				<%= product.name %>
+		</li>
+
+	<%end%>
+</ul>
+
 </p>
 
 

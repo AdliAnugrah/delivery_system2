@@ -6,9 +6,11 @@ class Product < ActiveRecord::Base
  validates :quantity, numericality: { only_integer: true , :greater_than_or_equal_to =>0}
  validates :price, numericality: { only_integer: true, :greater_than_or_equal_to =>0}
 
-  attr_accessible :name, :price, :quantity, :type
+  attr_accessible :name, :price, :quantity, :type , :image , :category_id
 
+mount_uploader :image, ImageUploader
 
+belongs_to :category
 
 
 end
