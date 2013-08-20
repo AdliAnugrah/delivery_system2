@@ -1,9 +1,9 @@
 
-<div style='float:right;margin-top: 25spx;'>
+<div style='float:right;margin-top: 25spx; height:569px'>
 
 
   <div style=' background-color:#DB8400; opacity:0.3; display:block;
-  height:569px;width:300px;border-radius : 10px 10px 10px 10px;'>
+  height:569px;width:300px;border-radius : 10px 10px 10px 10px; margin-top: 20px;'>
 
   </div>
 
@@ -40,8 +40,32 @@
 </div>
 
 
-<div style='border:2px solid black; width:70%; height: 500px; float:left; margin: 25px 10px 5px 10px;'>
-<div class='pic'>
-  <%= image_tag '/assets/tomyum.jpg'%>
+
+<div id="myCarousel" class="carousel slide" style='border:2px solid black; width: 900px; height:400px;border-radius : 10px 10px ; margin-top:25px;'>
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+  </ol>
+  <!-- Carousel items -->
+  <div class="carousel-inner" style='height:400px; width:900px; border-radius : 10px 10px ;'>
+    <div class="active item">
+      <div class='slidshow'></div>
+    </div>
+    <div class="item">
+      <div class='slidshow2'></div>
+    </div>
+    <div class="item">
+      <div class='slidshow3'></div>
+    </div>
+    <div class="item">
+      <div class='slidshow4'></div>
+    </div>
+  </div>
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
 </div>
-</div>
+
+<div class='clearer'></div>

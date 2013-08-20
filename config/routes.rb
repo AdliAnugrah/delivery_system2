@@ -7,6 +7,6 @@ DeliverySystem::Application.routes.draw do
   resources :products
   resources :categories
   resources :photo
-  root to: redirect('/users/sign_in')
-  
+  # root to: redirect('/users/sign_in')
+  root to: 'home#index'
 end

@@ -1,8 +1,8 @@
-<h1>Listing categories</h1>
+<h1 id='judulindexcategory'>Listing Categories</h1>
 
-<table>
+<table class="table table-hover" id='tablecategory'>
 	<tr>
-		<th>Name</th>
+		<th><h3>Name</h3></th>
 		<th></th>
 		<th></th>
 		<th></th>
@@ -12,12 +12,12 @@
 
 	<tr>
 		<td> <%= category.name%> </td>
-		<td><%= link_to 'Show', category%></td>
-		<td><%= link_to 'Edit', edit_category_path(category)%></td>
-		<td><%= link_to 'Destroy', category, method: :delete, data: {confirm: 'Are you sure?'} %></td>
-
-
-
+		<td colspan='3' style='text-align:left;'>
+			<%= link_to 'Show', category,class:"btn btn-default  btn-inverse", style:'width:80px'%>
+			<%= link_to 'Edit', edit_category_path(category),class:"btn btn-default  btn-inverse", style:'width:80px;margin-left: 15px;
+				margin-right: 15px;'%>
+			<%= link_to 'Destroy', category,class:"btn btn-default  btn-inverse", style:'width:80px' ,method: :delete, data: {confirm: 'Are you sure?'} %>
+		</td>
 	</tr>
 
 	<%end%>
@@ -25,5 +25,5 @@
 
 </br>
 
-<%= link_to 'New Category', new_category_path %>
+<%= link_to 'New Category', new_category_path,class:"btn btn-default btn-block btn-inverse", style:'width:80px;width: 133px;float: right;margin-right: 80px;' %>
 

@@ -10,23 +10,28 @@
   <%= csrf_meta_tags %>
 
 
-<h1  align='center' style='background:#d88539;'>Flash!!!!! Delivery</h1>
+
 
 
 
 
 </head>
 <body style='background-image:url(/assets/background.jpg);'>
-	<div  class='container-fluid' style='border:2px solid white; padding: 10px 5px 10px 5px; margin-top:20px; margin bottom:20px;'>
+	<div  class='container-fluid container-fluid-2'>
+		<h1 class='flash-delivery'>Flash!!!!! Delivery</h1>
+		<%= render "layouts/menu"%>
+		<%= render 'layouts/welcome' %>
+		<!-- Buat nampilin USER!! -->
 
+		<%= yield %>
 
+		
 
-<%= render "layouts/menu"%>
+	</div>
 
-<%= yield %>
-
-<%= render "layouts/footer"%>
-
+	
+	
+	<%= render "layouts/footer"%>
 </body>
 
 

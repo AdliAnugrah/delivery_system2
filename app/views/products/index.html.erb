@@ -1,8 +1,8 @@
-<h1>Listing products</h1>
+<h1 id='judulindexproduct'>Listing Products</h1>
 
-<table>
+<table class="table table-hover" id='tableproduct'> 
 	<tr>
-		<th>Name</th>
+		<th><h3>Name</h3></th>
 		<th></th>
 		<th></th>
 		<th></th>
@@ -12,11 +12,11 @@
 
 	<tr>
 		<td> <%= product.name%> </td>
-		<td><%= link_to 'Show', product%></td>
-		<td><%= link_to 'Edit', edit_product_path(product)%></td>
-		<td><%= link_to 'Destroy', product, method: :delete, data: {confirm: 'Are you sure?'} %></td>
-
-
+		<td><%= link_to 'Show', product,class:"btn btn-default  btn-inverse", style:'width:80px'%>
+				<%= link_to 'Edit', edit_product_path(product),class:"btn btn-default  btn-inverse", style:'width:80px;margin-left: 15px;
+margin-right: 15px;'%>
+				<%= link_to 'Destroy', product,class:"btn btn-default  btn-inverse", style:'width:80px', method: :delete, data: {confirm: 'Are you sure?'} %>
+		</td>
 
 	</tr>
 
@@ -25,5 +25,5 @@
 
 </br>
 
-<%= link_to 'New Product', new_product_path %>
+<%= link_to 'New Product', new_product_path,class:"btn btn-default btn-block btn-inverse", style:'width:80px;width: 133px;float: right;margin-right: 80px;' %>
 

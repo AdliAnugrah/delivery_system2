@@ -2,5 +2,9 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @category %> |
-<%= link_to 'Back', categories_path %>
+<tr>
+<td>
+<%= link_to 'Show', @category,class:"btn btn-default btn-block btn-inverse", style:'width:80px;float: right;margin-right: 25px;' %> 
+<%= link_to 'Back', categories_path,class:"btn btn-default btn-block btn-inverse", style:'width:80px;float: right;margin-right: 25px;' %>
+</td>
+</tr>

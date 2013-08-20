@@ -1,40 +1,68 @@
 
-<div style='float:right;margin-top: 25px; '>
+<div style='float:right;margin-top: 25px; height:400px;'>
 
 
-  <div style=' background-color:#DB8400;opacity: 0.3; display:block;height:400px;width:300px;border-radius : 10px 10px 10px 10px;'>
+  <div style=' background-color:#DB8400;opacity: 0.3; 
+    display:block;height:400px;width:300px;border-radius : 10px 10px 10px 10px;'>
 
+  </div> 
+  <!-- background transparant -->
+
+
+  <div style='position:relative;right: -22px;top:-375px;z-index:1;'> 
+
+    <h2>Sign in</h2>
+
+    <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+      <div><%= f.label :email %><br />
+      <%= f.email_field :email, :autofocus => true %></div>
+
+      <div><%= f.label :password %><br />
+      <%= f.password_field :password %></div>
+
+      <% if devise_mapping.rememberable? -%>
+        <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+      <% end -%>
+
+      <div><%= f.submit "Sign in" %></div>
+    <% end %>
+
+
+
+    <%= render "devise/shared/links" %>
+  </div> <!-- isi -->
+
+</div>
+
+
+<div id="myCarousel" class="carousel slide" style='border:2px solid black; width: 900px; height:400px;border-radius : 10px 10px ;margin-top:25px;'>
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+  </ol>
+  <!-- Carousel items -->
+  <div class="carousel-inner" style='height:400px; width:900px; border-radius : 10px 10px ;'>
+    <div class="active item">
+      <div class='slidshow'></div>
+    </div>
+    <div class="item">
+      <div class='slidshow2'></div>
+    </div>
+    <div class="item">
+      <div class='slidshow3'></div>
+    </div>
+    <div class="item">
+      <div class='slidshow4'></div>
+    </div>
   </div>
-
-
-  <div style='position:relative;right: -22px;top:-375px;z-index:1;'>
-
-<h2>Sign in</h2>
-
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
-
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
-
-  <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-  <% end -%>
-
-  <div><%= f.submit "Sign in" %></div>
-<% end %>
-
-
-
-<%= render "devise/shared/links" %>
- </div>
-
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
 </div>
 
 
-<div style='border:2px solid black; width:70%; height: 500px; float:left; margin: 25px 10px 5px 10px;'>
-<div class='pic'>
-  <%= image_tag '/assets/hotdog.jpg'%>
-</div>
-</div>
+<div class='clearer'></div>
+
+
