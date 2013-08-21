@@ -1,4 +1,59 @@
 
+    <div class='row'>
+      <h1 id='mainindex'>Mari Berpesta Makanan !!!</h1>
+        <div style='border: 1px solid black; width:940px; height: 300px;'>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>No</th>
+                <th><%= image_tag '/assets/lasagna.jpg', class: "pic" %></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td ><%= image_tag '/assets/friedchicken.jpg', class: "pic" %></td>
+                <td>Adli</td>
+              </tr>
+
+              <tr>
+                <td>2</td>
+                <td><%= image_tag '/assets/friedchicken.jpg', class: "pic" %></td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
