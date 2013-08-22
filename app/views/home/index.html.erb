@@ -1,31 +1,79 @@
+<div style='float:right;margin-top: 25px; height:400px;'>
+
+
+  <div style=' background-color:#DB8400;opacity: 0.3; 
+    display:block;height:400px;width:300px;border-radius : 10px 10px 10px 10px;'>
+
+  </div> 
+  <!-- background transparant -->
+
+
+  <div style='position:relative;right: -22px;top:-400px; z-index:1;'> 
+
+    <h2>Sign in</h2>
+
+    <%= form_for(User.new, :as => :user, :url => session_path(:user)) do |f| %>
+      <div><%= f.label :email %><br />
+      <%= f.email_field :email, :autofocus => true %></div>
+
+      <div><%= f.label :password %><br />
+      <%= f.password_field :password %></div>
+
+      <% if Devise.mappings[:user].rememberable? -%>
+        <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+      <% end -%>
+
+      <div><%= f.submit "Sign in" %></div>
+    <% end %>
+
+
+<%= render "devise/shared/links", resource_name: :user, devise_mapping: Devise.mappings[:user] %>
+  </div> <!-- isi -->
+
+</div>
 
 
 
-  
 
-
-  	<div style=' background-color:#DB8400;opacity: 0.3; display:block;height:400px;width:70%;border-radius : 10px 10px 10px 10px;'>
+  	<div style=' background-color:#DB8400;opacity: 0.3; display:block;height:630px;width:70%;border-radius : 10px 10px 10px 10px;'>
 
   	</div> 
   	<!-- background transparant -->
 
 
-  <div style='position:relative;right: -22px;top:-375px;z-index:1;'> 
+  <div style='position:relative;left: 35px; bottom: 610px;z-index:1;width: 900px;'> 
 		<!-- disini tempat foto atas -->
 
+
 		<div>
-			<div style='border:1px solid black; width:50px; height:50px; margin:10px; float:left;'>1</div>
-			<div style='border:1px solid black; width:50px; height:50px; margin:10px; float:left;'>2</div>
-			<div style='border:1px solid black; width:50px; height:50px; margin:10px; float:left;'>3</div>
-			<div style='border:1px solid black; width:50px; height:50px; margin:10px; float:left';>4</div> 
+				<p style='margin-left;20px; color:black; font-size:20px;'><strong>Selamat Datang,</strong></p>
+				<p style='margin-left;20px; color:black; font-size:20px;'><strong>Mari Berpesta Makanan! Dengan hidangan yang anda mau dengan Flash Delivery!</strong></p>
+
+			<div id='boximage'><%= image_tag '/assets/friedchicken.jpg', class: "picbox" %></div>
+			<div id='boximage'><%= image_tag '/assets/hotdog.jpg', class: "picbox" %></div>
+			<div id='boximage'><%= image_tag '/assets/burger.jpg', class: "picbox" %></div>
+			<div id='boximage'><%= image_tag '/assets/lasagna.jpg', class: "picbox" %></div> 
 		</div>
+
 		<div style='clear:both;'></div>
+
 		<div>
-			<div style='border:1px solid black; width:50px; height:50px; margin:10px; float:left;'>1</div>
-			<div style='border:1px solid black; width:50px; height:50px; margin:10px; float:left;'>2</div>
-			<div style='border:1px solid black; width:50px; height:50px; margin:10px; float:left;'>3</div>
-			<div style='border:1px solid black; width:50px; height:50px; margin:10px;float:left';>4</div> 
+			<div id='boximage'><%= image_tag '/assets/nasigoreng.jpg', class: "picbox" %></div>
+			<div id='boximage'><%= image_tag '/assets/spaghetti.jpg', class: "picbox" %></div>
+			<div id='boximage'><%= image_tag '/assets/pizza.jpg', class: "picbox" %></div>
+			<div id='boximage'><%= image_tag '/assets/rendang.jpg', class: "picbox" %></div> 
 		</div>
+
+		<div style='clear:both;'></div>
+
+		<div>
+			<div id='boximage'><%= image_tag '/assets/guramegoreng.jpg', class: "picbox" %></div>
+			<div id='boximage'><%= image_tag '/assets/ayambakarkecil.jpg', class: "picbox" %></div>
+			<div id='boximage'><%= image_tag '/assets/kepiting.jpg', class: "picbox" %></div>
+			<div id='boximage'><%= image_tag '/assets/dimsum.jpg', class: "picbox" %></div> 
+		</div>
+
+
 		<!-- disini tempat foto bawah -->
 
 

@@ -18,6 +18,28 @@ ul.menu
 	
 }
 
+.picbox
+{
+		border-radius : 20px 20px;
+		height: 150px;
+		width: 180px;
+}
+
+
+#boximage
+
+{
+
+	border:1px solid black; 
+	width:180px; 
+	height:150px; 
+	margin:10px; 
+	float:left;
+	border-radius : 20px 20px;
+
+
+}
+
 #menubar 
 {
 background:#d88539;height: 46px; overflow: hidden;
@@ -81,7 +103,7 @@ border-radius : 10px 10px ;
 .welcome
 {
 font-weight: bold; 
-margin-left: 1215px; 
+margin-left: 1070px; 
 margin-top: 25px;
 }
 
@@ -149,3 +171,4 @@ h2 {
 
 
 }
+

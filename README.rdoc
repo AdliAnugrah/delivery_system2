@@ -27,7 +27,18 @@
 
 
 
-
+<%= image_tag '/assets/friedchicken.jpg', class: "picbox" %>
+<%= image_tag '/assets/hotdog.jpg', class: "picbox" %>
+<%= image_tag '/assets/burger.jpg', class: "picbox" %>
+<%= image_tag '/assets/lasagna.jpg', class: "picbox" %>
+<%= image_tag '/assets/nasigoreng.jpg', class: "picbox" %>
+<%= image_tag '/assets/spaghetti.jpg', class: "picbox" %>
+<%= image_tag '/assets/pizza.jpg', class: "picbox" %>
+<%= image_tag '/assets/rendang.jpg', class: "picbox" %>
+<%= image_tag '/assets/guramegoreng.jpg', class: "picbox" %>
+<%= image_tag '/assets/ayambakarkecil.jpg', class: "picbox" %>
+<%= image_tag '/assets/kepiting.jpg', class: "picbox" %>
+<%= image_tag '/assets/dimsum.jpg', class: "picbox" %>
 
 
 
