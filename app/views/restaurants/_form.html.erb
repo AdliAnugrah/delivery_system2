@@ -1,4 +1,4 @@
-<%= form_for(@restaurant) do |f| %> 
+<%= form_for(@restaurant,html:{multipart:true}) do |f| %> 
 	<% if @restaurant.errors.any? %>
 		<div id ="error_explanation" >
 			<h2><%= pluralize(@restaurant.errors.count, "error")%>
@@ -37,6 +37,28 @@
 		<div class="field">
 		<%= f.label :province %> <br/>
 		<%= f.text_field :province %>
+		
+	</div>
+
+
+
+	<div class="field">
+		<%= f.label :phone %> <br/>
+		<%= f.text_field :phone %>
+		
+	</div>
+
+	<div class="field">
+		<%= f.label :district %> <br/>
+		<%= f.collection_select :district_id, District.all,:id,:name %>
+		
+	</div>
+
+
+
+		<div class="field">
+		<%= f.label :image %> <br/>
+		<%= f.file_field :image %>
 		
 	</div>
 

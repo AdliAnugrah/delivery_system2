@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @district.name %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @district.location_id %>
+</p>
+
+	<ul>
+			<%@restaurants.each do |restaurant|%>
+			<li>
+					<span><%=restaurant.name%></span>
+					<!-- jika restaurant punya gambar tampilkan -->
+					<%if restaurant.image.present?%>
+							<%=image_tag restaurant.image_url%>
+							<%end%>
+			</li>
+				<%end%>
+	</ul>
+
+<%= link_to 'Edit', edit_district_path(@district) %> |
+<%= link_to 'Back', districts_path %>

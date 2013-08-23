@@ -1,6 +1,12 @@
 DeliverySystem::Application.routes.draw do
 
 
+  resources :districts
+
+
+  resources :locations
+
+
 	devise_for :users
   resources :users
   resources :restaurants

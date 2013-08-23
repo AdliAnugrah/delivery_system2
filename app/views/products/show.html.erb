@@ -28,6 +28,15 @@
 
 </p>
 
+<p>
+	<b>Restaurant : </b>
+	<%= link_to @product.restaurant.name, restaurant_path(@product.restaurant)%>
+
+</p>
+
+
+
+
 
 <%= link_to 'edit', edit_product_path(@product),class:"btn btn-default btn-block btn-inverse", style:'width:80px;float: right;margin-right: 25px;'%> |
 <%= link_to 'back', products_path(@product),class:"btn btn-default btn-block btn-inverse", style:'width:80px;float: right;margin-right: 25px;'%>

@@ -6,6 +6,18 @@
   <div><%= f.label :email %><br />
   <%= f.email_field :email, :autofocus => true %></div>
 
+
+<!-- cek apakah user adalah admin -->
+<%if resource.is_admin? %>
+
+  <div><%= f.label :is_admin %><br />
+  <%= f.check_box :is_admin %></div>
+
+  <%end%>
+
+
+
+
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>

@@ -8,7 +8,9 @@
 <ul>
 	<% @category.products.each do |product| %>
 		<li>
-				<%= product.name %>
+				<%= link_to product.name,products_path(name:product.name) %>
+
+
 		</li>
 
 	<%end%>

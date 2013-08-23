@@ -24,6 +24,55 @@
 
 </p>
 
+<p>
+	<b>Phone: </b>
+	<%= @restaurant.phone%>
+
+</p>
+
+
+<p>
+	<b>District: </b>
+	<%= link_to @restaurant.district.name, district_path(@restaurant.district)%>
+
+</p>
+
+
+<p>
+	<%if @restaurant.image.present?%>
+		<p>
+
+			<b>Image </b>
+			<%= image_tag @restaurant.image_url%>
+		</p>
+<%end%>
+
+</p>
+
+<div id='restaurant_product'>
+
+	<ul>
+		<!-- looping untuk menampilkan produk dari restaurant berupa product name nya dan gambar dari product itu sendiri -->
+			<%@restaurant.products.each do |product|%>
+			<li>
+
+				<!-- tampilkan nama produk -->
+					<span><%product.name%></span>
+					<!--cek apakah produk ada gambar  -->
+					<%if product.image.present?%>
+					<!-- tampilkan gambar dari produk -->
+				<span> <%=image_tag product.image_url%></span>
+
+
+				<%end%>
+
+			</li>
+
+		
+				<%end%>
+	</ul>
+
+</div>
 
 <%= link_to 'edit', edit_restaurant_path(@restaurant),class:"btn btn-default btn-block btn-inverse", style:'width:80px;float: right;margin-right: 25px;'%> 
 <%= link_to 'back', restaurants_path(@restaurant),class:"btn btn-default btn-block btn-inverse", style:'width:80px;float: right;margin-right: 25px;'%>

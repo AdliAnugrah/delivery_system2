@@ -11,9 +11,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130821024736) do
+ActiveRecord::Schema.define(:version => 20130823042717) do
 
   create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "districts", :force => true do |t|
+    t.string   "name"
+    t.integer  "location_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "locations", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
@@ -23,12 +36,13 @@ ActiveRecord::Schema.define(:version => 20130821024736) do
     t.string   "name"
     t.string   "product_type"
     t.integer  "quantity"
-    t.decimal  "price",        :precision => 10, :scale => 0
+    t.decimal  "price",         :precision => 10, :scale => 0
     t.string   "slug"
-    t.datetime "created_at",                                  :null => false
-    t.datetime "updated_at",                                  :null => false
+    t.datetime "created_at",                                   :null => false
+    t.datetime "updated_at",                                   :null => false
     t.string   "image"
     t.integer  "category_id"
+    t.integer  "restaurant_id"
   end
 
   add_index "products", ["slug"], :name => "index_products_on_slug", :unique => true
@@ -39,9 +53,12 @@ ActiveRecord::Schema.define(:version => 20130821024736) do
     t.string   "city"
     t.string   "province"
     t.string   "slug"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
     t.integer  "user_id"
+    t.string   "phone"
+    t.string   "image"
+    t.integer  "district_id"
   end
 
   add_index "restaurants", ["slug"], :name => "index_restaurants_on_slug", :unique => true
@@ -65,6 +82,7 @@ ActiveRecord::Schema.define(:version => 20130821024736) do
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string   "unconfirmed_email"
+    t.boolean  "is_admin"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

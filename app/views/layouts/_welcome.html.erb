@@ -1,6 +1,10 @@
 <div class='row'>
+	
+		<%if user_signed_in?%>
 	  <div style=' background-color:#DB8400;opacity: 0.3; display:block ;height:30px;width:200px;border-radius : 10px; float:right; position: relative; bottom: -25px; z-index: -1;'>
 		</div>  <!-- background transparant -->
-	  <p class='welcome'> Welcome, <%= current_user.name if user_signed_in? %></p>
+
+	  <p class='welcome'> Welcome, <%= current_user.name%></p>
+	  <%end%>
 	</div>
 <div class='clearer'></div>

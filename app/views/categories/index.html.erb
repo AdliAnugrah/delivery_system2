@@ -23,10 +23,16 @@
 	<tr>
 		<td> <%= category.name%> </td>
 		<td colspan='3' style='text-align:left;'>
+			<!-- jika yang login adalaha admin, maka boleh edit category -->
 			<%= link_to 'Show', category,class:"btn btn-default  btn-inverse", style:'width:80px'%>
+
+<!-- jika yang login adalaha admin, maka boleh edit category -->
+			<%if user_signed_in? && current_user.is_admin?%>
 			<%= link_to 'Edit', edit_category_path(category),class:"btn btn-default  btn-inverse", style:'width:80px;margin-left: 15px;
 				margin-right: 15px;'%>
 			<%= link_to 'Destroy', category,class:"btn btn-default  btn-inverse", style:'width:80px' ,method: :delete, data: {confirm: 'Are you sure?'} %>
+			<%end%>
+
 		</td>
 	</tr>
 
