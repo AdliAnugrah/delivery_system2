@@ -1,18 +1,19 @@
 DeliverySystem::Application.routes.draw do
 
 
-  resources :districts
 
+  resources :checkout, only: [:create]
 
-  resources :locations
-
+  get "search/index"
 
 	devise_for :users
+  resources :orders
   resources :users
   resources :restaurants
   resources :products
   resources :categories
   resources :photo
+  resources :districts
   # root to: redirect('/users/sign_in')
   root to: 'home#index'
 end

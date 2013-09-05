@@ -1,4 +1,14 @@
 
+     <%if user_signed_in? %>
+      <li><%= link_to 'Logout', destroy_user_session_path, class:"btn btn-default btn-block btn-inverse ",style:'width:60px;margin-left: 15px;' , method: :delete %>
+      </li>
+    <%else%>
+      <li> <%= link_to 'Login', new_user_session_path, 
+      class:"btn btn-default btn-block btn-inverse", style:'width:60px;margin-left: 25px;' %> </li>
+    <%end%>
+
+
+
     <div class='row'>
       <h1 id='mainindex'>Mari Berpesta Makanan !!!</h1>
         <div style='border: 1px solid black; width:940px; height: 300px;'>

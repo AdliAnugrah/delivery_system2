@@ -1,0 +1,37 @@
+<div class='span4'>
+    <div id='order-summary'>
+      <h4>Order Summary</h4>    
+      <div id='order-products'>
+        <div id='blank'>You have no items in your shopping cart</div>
+
+        <ul id='product-list'>
+        </ul>
+
+        <ul id='total-summary'>
+          <li>
+            <span class='one'><strong>Order Amount</strong></span>
+            <span class='two' id='span-quantity'>0</span>
+          </li>
+          <li>
+            <span class='one'>Sub total</span>
+            <span class='two' id='span-subtotal'>Rp. 0</span>
+          </li>
+          <li>
+            <span class='one'>Tax & Charge</span>
+            <span class='two' id='span-charge'>Rp. 0</span>
+          </li>
+          <li>
+            <span class='one'>Delivery Fee</span>
+            <span class='two' id='span-delivery'>Rp. 0</span>
+          </li>
+          <li>
+            <span class='one'>Total</span>
+            <span class='two' id='span-total'>Rp 0</span>
+          </li>
+        </ul>
+        <center>
+          <%= link_to 'Checkout', '#', class: 'btn btn-warning', id: 'checkout_button' %>
+        </center>
+      </div>
+    </div>
+  </div>

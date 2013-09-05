@@ -1,63 +1,70 @@
-	<div style=' background-color:#DB8400;opacity: 0.3; display:block;height:630px;width:100%;border-radius : 10px 10px;'>
+	<div style=' background-color:#DB8400;opacity: 0.3; display:block;height:630px;width:100%;border-radius : 10px 10px;margin-top: 25px;'>
 
   	</div> 
 
 <div style='position:relative;left: 35px; bottom: 610px;z-index:1;'> 
 
 
-<h1 id='judulindexproduct'>Listing Products</h1>
+								<h1 id='judulindexproduct'>Products List</h1>
 
-<table class="table table-hover" id='tableproduct'> 
-	<tr>
-		<th><h3>Name</h3></th>
-		<th></th>
-		<th></th>
-		<th></th>
-	</tr>
+								</br>
 
-<% @products.each do |product|%>
+		<div id='scroll'>
+						<table class="table table-hover" id='tableproduct'> 
+								<tr>
+									<th><h3>Name</h3></th>
+									<th></th>
+									<th></th>
+									<th></th>
+								</tr>
 
-	<tr>
+								<% @products.each do |product|%>
 
-
-		<td><%= product.name%> 
-			<!-- jika ada user yang cari makanan dengan nama makanan seperti xxx -->
-			<!-- maka tampilkan besserta nama restaurant nya -->
-
-		 <%if params[:name]%>
-		 <span><%link_to product.restaurant.name, restaurant_path(product.restaurant)%></span>
-		 	<!-- Jika restaurant ada gambarnya, tampilkan juga -->
-		 <%if product.restaurant.image.present?%>
-		 	<span><%= image_tag product.restaurant.image_url%></span>
-		 	<%end%>
-		 <%end%>
-		</td>
+								<tr>
 
 
+								<td>
+									<div style='font-size:15px;margin-bottom'><%= product.name%></div>
+									<!-- jika ada user yang cari makanan dengan nama makanan seperti xxx -->
+									<!-- maka tampilkan besserta nama restaurant nya -->
 
-		<td><%= link_to 'Show', product,class:"btn btn-default  btn-inverse", style:'width:80px'%>
+								 <%if params[:name]%>
+								 <span><%link_to product.restaurant.name, restaurant_path(product.restaurant)%></span>
+								 	<!-- Jika restaurant ada gambarnya, tampilkan juga -->
+								 <%if product.restaurant.image.present?%>
+								 	<span><%= image_tag product.restaurant.image_url,
+								 	style:'width: 200px;margin-right:100px;margin-left:50px;'%></span>
 
-				<%if user_signed_in? && current_user.is_admin?%>
+								 	<%end%>
+								 <%if product.restaurant.image.present?%>
+								 	<span><%= image_tag product.image_url, style:'width: 200px;margin-right: 20px;'%></span>
+								 	
+								 	<%end%>
 
-				<%= link_to 'Edit', edit_product_path(product),class:"btn btn-default  btn-inverse", style:'width:80px;margin-left: 15px;
-					margin-right: 15px;'%>
-				<%= link_to 'Destroy', product,class:"btn btn-default  btn-inverse", style:'width:80px', method: :delete, data: {confirm: 'Are you sure?'} %>
-				<%end%>
+								 <%end%>
+								</td>
 
-		</td>
 
-	</tr>
 
-	<%end%>
-<table>
+								<td><%= link_to 'Show', product,class:"btn btn-default  btn-inverse", style:'width:80px;color:white;'%>
 
-</br>
+										<%if user_signed_in? && current_user.is_admin?%>
 
-<%= link_to 'New Product', new_product_path,class:"btn btn-default btn-block btn-inverse", style:'width:80px;width: 133px;float: right;margin-right: 80px;' %>
+										<%= link_to 'Edit', edit_product_path(product),class:"btn btn-default  btn-inverse", style:'width:80px;margin-left: 15px;margin-right: 15px;color:white;'%>
+										<%= link_to 'Destroy', product,class:"btn btn-default  btn-inverse", style:'width:80px;color:white;', method: :delete, data: {confirm: 'Are you sure?'} %>
+										<%end%>
 
+								</td>
+
+								</tr>
+
+								<%end%>
+						</table>
+			</div>
+
+						<div>
+										<%= link_to 'New Product', new_product_path,class:"btn btn-default btn-block btn-inverse", style:'width:80px;width: 133px;float: right;margin-right: 80px;color:white;margin-top:70px;' %>
+						</div>
 	
-	 </div>
-
- <!-- isi -->
-
-
+			
+</div>

@@ -1,3 +1,16 @@
+.loginresgister
+{
+
+
+font-weight: bold; 
+margin-left: 1110px; 
+margin-top: 5px;
+
+
+}
+
+
+
 ul.menu
 {
 	overflow:hidden ;
@@ -51,8 +64,11 @@ border-radius : 10px 10px 10px 10px;
 {
 
 background-color: #d88539;
-border:1px solid black; height: 100px; margin: 25px 10px 5px 10px;
+border:1px solid black; height: 100px; margin: 25px 80px 5px 10px;
 border-radius : 10px 10px ;
+margin-top: 160px;
+
+
 
 }
 
@@ -82,6 +98,7 @@ border-radius : 10px 10px ;
 {
 	text-align: center;
 	margin-top: 35px;
+
 }
 
 #tablerestaurant
@@ -98,6 +115,19 @@ border-radius : 10px 10px ;
 #tableproduct
 {
 	margin-left: 35px;
+}
+
+#font 
+{
+	font-size: 25px;
+	color: black;
+	margin-bottom: 20px;
+	
+}
+
+.table td 
+{
+	font-weight: bolder;
 }
 
 .welcome
@@ -172,3 +202,26 @@ h2 {
 
 }
 
+#scroll
+{
+	margin-top: -30px;
+	height: 400px;
+	width: 1180px;
+	overflow-y:scroll;
+	overflow-x:hidden;
+}
+
+#scroll2
+{
+	height: 520px;
+	width: 825px;
+	overflow-y:scroll;
+	overflow-x:hidden;
+}
+
+.form-search
+{
+	float: left;
+	
+
+}

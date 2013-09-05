@@ -3,38 +3,86 @@
 
 
 
-<head>
-  <title>DeliverySystem</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+		<head>
+
+			<link rel="icon" type="image/png" href="/assets/burgerlogo.png">
+
+		  <title>DeliverySystem</title>
+		  <%= stylesheet_link_tag    "application", :media => "all" %>
+		  <%= javascript_include_tag "application" %>
+		  <%= csrf_meta_tags %>
 
 
-
-
-
-
-
-</head>
-<body style='background-image:url(/assets/background.jpg);' class="<%=controller_name%>">
-	<div  class='container-fluid container-fluid-2'>
-		<h1 class='flash-delivery'>Flash!!!!! Delivery</h1>
-		<%= render "layouts/menu"%>
-		<%= render 'layouts/welcome' %>
-		<%= render 'layouts/alert'%>
-		<!-- Buat nampilin USER!! -->
-
-		<%= yield %>
-
-		
-
-	</div>
-
+		  		
 	
-	
+					<!-- LoginRegister atas -->
+	  			<div style=' background-color:#DB8400;opacity: 0.8; display:block ;
+	  			height:30px;width:175px;border-radius : 10px; float:right;
+	  			position: relative; bottom: -25px; z-index: -1;margin-right: 25px;margin-top: -25px;'>
+					</div>  <!-- background transparant -->
 
-</body>
+	  			<p class='loginresgister'>  
+
+	  				<%if user_signed_in? %>
+
+	  				<%= link_to 'Sign Out', destroy_user_session_path, method: :delete%>
+
+	  				<%else%>
+
+	  				<%= link_to 'Sign In', new_user_session_path%> 
+
+	  				<%end%>
+
+
+
+
+
+
+
+	  				|  
+
+
+
+	  				<%if user_signed_in? %>
+	  				<%= link_to 'My Account', edit_user_registration_path%> 
+	  				<%else%>
+	  				<%= link_to 'Register', new_user_registration_path%> </p>
+	  				<%end%>
+	  				
+	  			<!-- LoginRegister atas -->
+
+
+	  			 
+
+
+
+
+			
+					
+
+
+						<div  class='container-fluid container-fluid-2'>
+							<h1 class='flash-delivery'>Flash!!!!! Delivery</h1>
+							<%= render "layouts/menu"%>
+							<%= render 'layouts/welcome' %>
+							<%= render 'layouts/alert'%>
+							<!-- Buat nampilin USER!! -->
+
+							<%= yield %>
+
+						</div>
+
+		</head>
+
+
+		<body style='background-image:url(/assets/background.jpg);' class="<%=controller_name%>">
+
+
+		</body>
+
+
 	<%= render "layouts/footer"%>
+
 
 
 </html>

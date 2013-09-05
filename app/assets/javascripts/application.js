@@ -13,4 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
+//= require simplemodal/js/jquery.simplemodal
+//= require cookie
+//= require json2
 //= require_tree .

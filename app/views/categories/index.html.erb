@@ -1,4 +1,4 @@
-	<div style=' background-color:#DB8400;opacity: 0.3; display:block;height:630px;width:100%;border-radius : 10px 10px;'>
+	<div style=' background-color:#DB8400;opacity: 0.3; display:block;height:630px;width:100%;border-radius : 10px 10px;margin-top: 25px;'>
 
   	</div> 
 
@@ -8,7 +8,7 @@
 
 
 
-<h1 id='judulindexcategory'>Listing Categories</h1>
+<h1 id='judulindexcategory'>Categories List</h1>
 
 <table class="table table-hover" id='tablecategory'>
 	<tr>
@@ -24,13 +24,12 @@
 		<td> <%= category.name%> </td>
 		<td colspan='3' style='text-align:left;'>
 			<!-- jika yang login adalaha admin, maka boleh edit category -->
-			<%= link_to 'Show', category,class:"btn btn-default  btn-inverse", style:'width:80px'%>
+			<%= link_to 'Show', category,class:"btn btn-default  btn-inverse", style:'width:80px;color:white;'%>
 
 <!-- jika yang login adalaha admin, maka boleh edit category -->
 			<%if user_signed_in? && current_user.is_admin?%>
-			<%= link_to 'Edit', edit_category_path(category),class:"btn btn-default  btn-inverse", style:'width:80px;margin-left: 15px;
-				margin-right: 15px;'%>
-			<%= link_to 'Destroy', category,class:"btn btn-default  btn-inverse", style:'width:80px' ,method: :delete, data: {confirm: 'Are you sure?'} %>
+			<%= link_to 'Edit', edit_category_path(category),class:"btn btn-default  btn-inverse", style:'width:80px;margin-left: 15px;margin-right: 15px;color:white;'%>
+			<%= link_to 'Destroy', category,class:"btn btn-default  btn-inverse", style:'width:80px;color:white;' ,method: :delete, data: {confirm: 'Are you sure?'} %>
 			<%end%>
 
 		</td>
@@ -41,6 +40,6 @@
 
 </br>
 
-<%= link_to 'New Category', new_category_path,class:"btn btn-default btn-block btn-inverse", style:'width:80px;width: 133px;float: right;margin-right: 80px;' %>
-
+<%= link_to 'New Category', new_category_path,class:"btn btn-default btn-block btn-inverse", style:'width:80px;width: 133px;float: right;margin-right: 80px;color:white;' %>
+	</div>
 </div>

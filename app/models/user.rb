@@ -7,4 +7,5 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation , :name , :address, :remember_me
   
   has_many :restaurant
+  has_many :orders
 end

@@ -5,35 +5,24 @@
 <ul class='menu'>
 		
 		<li style='margin-left:30px;margin-right:30px'> <%= link_to 'Home', root_path,
-		class:"btn btn-default btn-block btn-inverse", style:'width:150px' %> </li>
+		class:"btn btn-default btn-block btn-inverse", style:'width:150px;color:white;' %> </li>
 
 		<li style='margin-left:30px;margin-right:30px'> <%= link_to 'Category', categories_path,
-		class:"btn btn-default btn-block btn-inverse", style:'width:150px' %> </li>
+		class:"btn btn-default btn-block btn-inverse", style:'width:150px;color:white;' %> </li>
 
 		<li style='margin-left:30px;margin-right:30px'> <%= link_to 'Restaurant', restaurants_path,
-		class:"btn btn-default btn-block btn-inverse", style:'width:150px' %> </li>
+		class:"btn btn-default btn-block btn-inverse", style:'width:150px;color:white;' %> </li>
 
 		<li style='margin-left:30px;margin-right:30px'> <%= link_to 'Product', products_path,
-		class:"btn btn-default btn-block btn-inverse", style:'width:150px' %>
+		class:"btn btn-default btn-block btn-inverse", style:'width:150px;color:white;' %>
 		 </li>
-
-		 <%if user_signed_in? %>
-			<li><%= link_to 'Logout', destroy_user_session_path, class:"btn btn-default btn-block btn-inverse ",style:'width:60px;margin-left: 80px;' , method: :delete %>
-			</li>
-		<%else%>
-			<li> <%= link_to 'Login', new_user_session_path, 
-			class:"btn btn-default btn-block btn-inverse", style:'width:60px;margin-left: 20px;' %> </li>
-		<%end%>
-
-
-
 
 
 		 <li>
-		 <form class="form-search">
-  		<input type="text" placeholder="Search Food..." class="input-medium search-query" style="margin-left:25px ;">
-		  <button type="submit" class="btn">Search</button>
-		</li>
+              <%= form_tag search_index_path, method: :get, class: 'navbar-search pull-left', id: 'Search' do %>
+                <%= text_field_tag :q, params[:q], placeholder: 'Search Food...',style:'margin-left: 120px;margin-top: -4px;' %>
+              <% end %>
+     </li>
 		</form>
 
 		

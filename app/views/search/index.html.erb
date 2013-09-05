@@ -1,0 +1,18 @@
+<div class='row-fluid margin'>
+
+
+<div style=' background-color:#DB8400;opacity: 0.3; display:block;height:375px;width:25%;border-radius : 10px 10px;margin-top: 25px;'>
+
+  	</div> 
+
+<div style='position:relative;left: 35px; bottom: 360px;z-index:1;'> 
+
+	<div class='form-search'>
+		<% if @products.present? %>
+			<h2><%= @products.count %> Product Found </h2>
+			<% @products.each do |product|  %>
+				<p><%= link_to product.name, product_path(product) %></p>
+			<% end -%>
+		<% end -%>
+	</div>
+</div>

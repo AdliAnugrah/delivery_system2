@@ -1,3 +1,91 @@
 // Place all the styles related to the restaurants controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body.restaurants {
+  div#restaurant_products {
+
+    ul {
+      li {
+        list-style-type: none;
+        margin-bottom: 5px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid black;
+        img {
+          width: 100px;
+        }
+        span.product-name { 
+          width: 300px;
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  div#order-summary {
+    h4 {
+      background-color:#e82329;
+      font-size:16px;
+      padding: 5px;
+      color: #fff;
+    }
+
+    #order-products {
+      #blank {
+        text-align: center;
+      }
+
+      ul#product-list {
+        li {          
+          list-style-type: none;
+          border-bottom: 1px dotted #000;
+          margin-bottom: 3px;
+          padding-bottom: 3px;
+          span { display: inline-block; }
+          span.number { width: 25px; }
+          span.product-name {
+            width: 200px;
+          }
+          span.price { width: 100px; }
+        }
+      }
+
+      ul#total-summary {
+        padding: 10px 40px;
+        display: block;
+        li {
+          list-style-type: none;
+          span.one {
+            display: inline-block;
+            width: 140px;
+          }
+          span.two {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+  .cart-box {
+    display: none;
+
+    div.field {
+      margin-bottom: 5px;
+
+      textarea { width: 520px; }
+      input[type='text'] { width: 100px;}
+    }
+
+    span.form-product-name {
+      font-weight: bold;
+    }
+    span.form-product-price {
+      color: #f68a21; float: right;
+      font-weight: bold;
+    }
+  }
+
+  #checkout_button {
+    display: none;
+  }
+}

@@ -1,78 +1,192 @@
 <p id="notice"> <%= notice %></p>
 
 <p>
-	<b>Name : </b>
-	<%= @restaurant.name%>
+  <b>Name : </b>
+  <%= @restaurant.name%>
 
 </p>
 
 <p>
-	<b>Address : </b>
-	<%= @restaurant.address%>
+  <b>Address : </b>
+  <%= @restaurant.address%>
 
 </p>
 
 <p>
-	<b>City : </b>
-	<%= @restaurant.city%>
+  <b>City : </b>
+  <%= @restaurant.city%>
 
 </p>
 
 <p>
-	<b>Province : </b>
-	<%= @restaurant.province%>
+  <b>Province : </b>
+  <%= @restaurant.province%>
 
 </p>
 
 <p>
-	<b>Phone: </b>
-	<%= @restaurant.phone%>
+  <b>Phone : </b>
+  <%= @restaurant.phone %>
 
 </p>
-
 
 <p>
-	<b>District: </b>
-	<%= link_to @restaurant.district.name, district_path(@restaurant.district)%>
+  <b>District : </b>
+  <%= link_to @restaurant.district.name, district_path(@restaurant.district) %>
 
 </p>
 
+<% if @restaurant.image.present? %>
+  <p>
+    <b>Image : </b>
+    <%= image_tag @restaurant.image_url %>
+  </p>
+<% end %>
 
-<p>
-	<%if @restaurant.image.present?%>
-		<p>
+<div class='row-fluid'>
+  <div class='span8'>
+    <div id='restaurant_products'>
+      <ul>
+        <!-- 
+          looping untuk menampilkan product dari restaurant berupa product name nya
+          dan gambar dari product itu sendiri.
+        -->
+        <% @restaurant.products.each do |product| %>
+          <li>
+            <!-- tampilkan nama product -->
+            <span class='product-name'><%= product.name %></span>
 
-			<b>Image </b>
-			<%= image_tag @restaurant.image_url%>
-		</p>
-<%end%>
+            <!-- cek, apakah product ada gambarnya -->
+            <% if product.image.present? %>
+              <!-- tampilkan gambar dari product -->
+              <span><%= image_tag product.image_url %></span>
+            <% end-%>
+            <span>Price <%= number_to_currency product.price, unit: 'Rp.', delimiter: '.', precision: 0 %>,-</span>
+            <span>
+              <%= link_to 'Add to cart', '#', class: 'btn btn-small btn-primary add-to-cart',
+                  data: { id: product.id, name: product.name, 
+                    price: product.price, currency: number_to_currency(product.price, unit: 'Rp.', delimiter: '.', precision: 0) }
+              %>
+            </span>
+          </li>      
+        <% end %>
+      </ul>
+    </div>
+  </div>
 
-</p>
+  <div class='span4'>
+    <div id='order-summary'>
+      <h4>Order Summary</h4>    
+      <div id='order-products'>
+        <div id='blank'>You have no items in your shopping cart</div>
 
-<div id='restaurant_product'>
+        <ul id='product-list'>
+        </ul>
 
-	<ul>
-		<!-- looping untuk menampilkan produk dari restaurant berupa product name nya dan gambar dari product itu sendiri -->
-			<%@restaurant.products.each do |product|%>
-			<li>
-
-				<!-- tampilkan nama produk -->
-					<span><%product.name%></span>
-					<!--cek apakah produk ada gambar  -->
-					<%if product.image.present?%>
-					<!-- tampilkan gambar dari produk -->
-				<span> <%=image_tag product.image_url%></span>
-
-
-				<%end%>
-
-			</li>
-
-		
-				<%end%>
-	</ul>
-
+        <ul id='total-summary'>
+          <li>
+            <span class='one'><strong>Order Amount</strong></span>
+            <span class='two' id='span-quantity'>0</span>
+          </li>
+          <li>
+            <span class='one'>Sub total</span>
+            <span class='two' id='span-subtotal'>Rp. 0</span>
+          </li>
+          <li>
+            <span class='one'>Tax & Charge</span>
+            <span class='two' id='span-charge'>Rp. 0</span>
+          </li>
+          <li>
+            <span class='one'>Delivery Fee</span>
+            <span class='two' id='span-delivery'>Rp. 0</span>
+          </li>
+          <li>
+            <span class='one'>Total</span>
+            <span class='two' id='span-total'>Rp 0</span>
+          </li>
+        </ul>
+        <center>
+          <%= link_to 'Checkout',orders_path(@order),class: 'btn btn-warning', id: 'checkout_button' %>
+        </center>
+      </div>
+    </div>
+  </div>
 </div>
 
-<%= link_to 'edit', edit_restaurant_path(@restaurant),class:"btn btn-default btn-block btn-inverse", style:'width:80px;float: right;margin-right: 25px;'%> 
-<%= link_to 'back', restaurants_path(@restaurant),class:"btn btn-default btn-block btn-inverse", style:'width:80px;float: right;margin-right: 25px;'%>
+
+<div style='clear:both'></div>
+
+<div class='row'>
+  <div class='span12'>
+    <span>
+      <%= link_to 'Edit', edit_restaurant_path(@restaurant),class:"btn btn-default btn-block btn-inverse", style:'width:80px;float: right;margin-right: 25px;;color:white;'%> 
+    </span>
+    
+    <span>
+      <%= link_to 'Back', restaurants_path(@restaurant),class:"btn btn-default btn-block btn-inverse", style:'width:80px;float: right;margin-right: 25px;;color:white;'%>
+    </span>
+  </div>
+</div>
+
+<div id='cart-box' class='cart-box'>
+  <form id='cart-form'>
+    <input type='hidden' name='product_id' id='product_id'/>
+    <input type='hidden' name='product_name' id='product_name'/>
+    <input type='hidden' name='product_price' id='product_price'/>
+    <input type='hidden' name='product_currency' id='product_currency'/>
+    <input type='hidden' name='random' id='random'/>
+
+    <div class='field'>
+      <span class='form-product-name' id='span-cart-box-1'></span>
+      <span class='form-product-price' id='span-cart-box-2'></span>
+    </div>
+
+    <div class='field'>
+      <textarea name='instruction' id='instruction' placeholder='Instruction'></textarea>
+    </div>
+
+    <div class='field'>
+      <input type='text' name='quantity' id='quantity' placeholder='Quantity'/>
+    </div>
+
+    <div class='field'>
+      <input type='button' name='order' id='order_button' value='Order' class='btn btn-small btn-danger'/>
+    </div>
+  </form>
+</div>
+
+<div id='update-cart-box' class='cart-box'>
+  <form id='update-cart-form'>
+    <input type='hidden' name='product_id' id='product_id'/>
+    <input type='hidden' name='product_name' id='product_name'/>
+    <input type='hidden' name='product_price' id='product_price'/>
+    <input type='hidden' name='product_currency' id='product_currency'/>
+    <input type='hidden' name='random' id='random'/>
+
+    <div class='field'>
+      <span class='form-product-name' id='span-cart-box-3'></span>
+      <span class='form-product-price' id='span-cart-box-4'></span>
+    </div>
+
+    <div class='field'>
+      <textarea name='instruction' id='instruction' placeholder='Instruction'></textarea>
+    </div>
+
+    <div class='field'>
+      <input type='text' name='quantity' id='quantity' placeholder='Quantity'/>
+    </div>
+
+    <div class='field'>
+      <input type='button' name='order' id='update_order_button' value='Order' class='btn btn-small btn-danger'/>
+    </div>
+  </form>
+</div>
+
+
+
+<%=form_tag checkout_index_path do%>
+  <%= hidden_field_tag :product_id,'' %>
+  <%= submit_tag 'Checkout'%>
+<%end%>
+
+
