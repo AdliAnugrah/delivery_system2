@@ -1,0 +1,721 @@
+
+---
+categories:
+  columns:
+  - id
+  - name
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - Indonesian Food
+    - 2013-08-02 02:44:04.000000000 Z
+    - 2013-08-02 02:44:04.000000000 Z
+  - - 2
+    - Chinese Food
+    - 2013-08-02 02:45:10.000000000 Z
+    - 2013-08-02 02:45:10.000000000 Z
+  - - 3
+    - Fast Food
+    - 2013-08-02 02:45:27.000000000 Z
+    - 2013-08-02 02:45:27.000000000 Z
+  - - 4
+    - Sea Food
+    - 2013-08-02 02:45:37.000000000 Z
+    - 2013-08-02 02:45:37.000000000 Z
+  - - 5
+    - Italian Food
+    - 2013-08-02 02:45:47.000000000 Z
+    - 2013-08-02 02:45:47.000000000 Z
+  - - 6
+    - Beverage
+    - 2013-09-05 04:48:42.000000000 Z
+    - 2013-09-05 04:48:42.000000000 Z
+
+---
+districts:
+  columns:
+  - id
+  - name
+  - location_id
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - Bendungan Hilir
+    - 1
+    - 2013-08-23 04:30:46.000000000 Z
+    - 2013-08-23 04:30:46.000000000 Z
+  - - 2
+    - Menteng
+    - 1
+    - 2013-08-23 04:30:57.000000000 Z
+    - 2013-08-23 04:30:57.000000000 Z
+  - - 3
+    - Thamrin
+    - 1
+    - 2013-08-23 04:31:08.000000000 Z
+    - 2013-08-23 04:31:08.000000000 Z
+  - - 4
+    - Ampera
+    - 2
+    - 2013-08-23 04:31:36.000000000 Z
+    - 2013-08-23 04:31:36.000000000 Z
+  - - 5
+    - Bangka
+    - 2
+    - 2013-08-23 04:31:48.000000000 Z
+    - 2013-08-23 04:31:48.000000000 Z
+  - - 6
+    - Antasari
+    - 2
+    - 2013-08-23 04:32:01.000000000 Z
+    - 2013-08-23 04:32:01.000000000 Z
+
+---
+locations:
+  columns:
+  - id
+  - name
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - Jakarta Pusat
+    - 2013-08-23 04:28:27.000000000 Z
+    - 2013-08-23 04:28:27.000000000 Z
+  - - 2
+    - Jakarta Selatan
+    - 2013-08-23 04:28:49.000000000 Z
+    - 2013-08-23 04:28:49.000000000 Z
+
+---
+orders:
+  columns:
+  - id
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - 2013-08-27 09:15:16.000000000 Z
+    - 2013-08-27 09:15:16.000000000 Z
+
+---
+products:
+  columns:
+  - id
+  - name
+  - product_type
+  - quantity
+  - price
+  - slug
+  - created_at
+  - updated_at
+  - image
+  - category_id
+  - restaurant_id
+  records: 
+  - - 1
+    - Aqua Gelas
+    - minuman
+    - 10
+    - 3000
+    - aqua-gelas
+    - 2013-08-01 08:23:49.000000000 Z
+    - 2013-08-23 07:42:04.000000000 Z
+    - aquagelas.jpg
+    - 1
+    - 2
+  - - 2
+    - Nasi Goreng
+    - Food
+    - 10
+    - 12000
+    - nasi-goreng
+    - 2013-08-02 02:33:45.000000000 Z
+    - 2013-08-23 07:42:40.000000000 Z
+    - nasigoreng.jpg
+    - 1
+    - 2
+  - - 4
+    - Teh Botol
+    - 
+    - 10
+    - 4000
+    - teh-botol
+    - 2013-08-15 05:02:10.000000000 Z
+    - 2013-08-23 07:44:05.000000000 Z
+    - tehbotol.jpg
+    - 1
+    - 2
+  - - 5
+    - Nasi Goreng Surabaya
+    - 
+    - 10
+    - 8000
+    - nasi-goreng-surabaya
+    - 2013-08-16 09:06:18.000000000 Z
+    - 2013-08-27 07:23:58.000000000 Z
+    - nasigorengsurabaya.jpg
+    - 1
+    - 3
+  - - 6
+    - Ayam Betutu Bali
+    - 
+    - 10
+    - 25000
+    - ayam-betutu-bali
+    - 2013-08-23 02:29:28.000000000 Z
+    - 2013-08-29 06:57:22.000000000 Z
+    - ayambetutu.jpg
+    - 1
+    - 6
+  - - 7
+    - Ayam cabe ijo
+    - 
+    - 10
+    - 15000
+    - ayam-cabe-ijo
+    - 2013-08-23 07:51:24.000000000 Z
+    - 2013-08-27 07:45:13.000000000 Z
+    - ayamcabeijo.jpg
+    - 1
+    - 5
+  - - 9
+    - Kwetiau goreng
+    - 
+    - 10
+    - 13500
+    - kwetiau-goreng
+    - 2013-08-27 06:55:15.000000000 Z
+    - 2013-08-27 06:55:15.000000000 Z
+    - kwetiaugoreng.jpg
+    - 2
+    - 3
+  - - 10
+    - Fuyunghai
+    - 
+    - 10
+    - 12000
+    - fuyunghai
+    - 2013-08-27 06:57:51.000000000 Z
+    - 2013-08-27 06:57:51.000000000 Z
+    - fuyunghai.jpg
+    - 2
+    - 3
+  - - 11
+    - mie yamin + baso
+    - 
+    - 10
+    - 12000
+    - mie-yamin-baso
+    - 2013-08-27 07:01:06.000000000 Z
+    - 2013-08-27 07:01:06.000000000 Z
+    - mieyamin.jpg
+    - 2
+    - 3
+  - - 12
+    - ! 'Fried Chicken '
+    - 
+    - 10
+    - 7000
+    - fried-chicken
+    - 2013-08-27 07:02:47.000000000 Z
+    - 2013-08-27 07:02:47.000000000 Z
+    - friedchicken.jpg
+    - 3
+    - 1
+  - - 13
+    - ! 'Pizza '
+    - 
+    - 10
+    - 49000
+    - pizza
+    - 2013-08-27 07:06:12.000000000 Z
+    - 2013-08-27 07:06:12.000000000 Z
+    - pizza.jpg
+    - 3
+    - 4
+  - - 14
+    - Spaghetti Bolognise
+    - 
+    - 10
+    - 23000
+    - spaghetti-bolognise
+    - 2013-08-27 07:12:57.000000000 Z
+    - 2013-08-27 07:26:39.000000000 Z
+    - spaghettibolognise.jpg
+    - 5
+    - 1
+  - - 15
+    - Cumi Asam Manis
+    - 
+    - 10
+    - 17500
+    - cumi-asam-manis
+    - 2013-08-27 07:17:17.000000000 Z
+    - 2013-08-27 07:28:18.000000000 Z
+    - cumiasammanis.jpg
+    - 4
+    - 7
+  - - 16
+    - Kepiting Saos Padang
+    - 
+    - 10
+    - 98000
+    - kepiting-saos-padang
+    - 2013-08-27 07:18:00.000000000 Z
+    - 2013-08-27 07:29:04.000000000 Z
+    - kepitingsaospadang.jpg
+    - 4
+    - 7
+  - - 17
+    - Kerang Dara Rebus
+    - 
+    - 10
+    - 8000
+    - kerang-dara-rebus
+    - 2013-08-27 07:18:29.000000000 Z
+    - 2013-08-27 07:30:22.000000000 Z
+    - kerangdararebus.JPG
+    - 4
+    - 7
+  - - 18
+    - Lasagna
+    - 
+    - 10
+    - 35000
+    - lasagna
+    - 2013-08-27 07:20:39.000000000 Z
+    - 2013-08-27 07:20:39.000000000 Z
+    - lasagna.jpg
+    - 5
+    - 1
+  - - 19
+    - Risotto
+    - 
+    - 10
+    - 25000
+    - risotto
+    - 2013-08-27 07:21:58.000000000 Z
+    - 2013-08-27 07:21:58.000000000 Z
+    - Risotto.jpg
+    - 5
+    - 1
+  - - 20
+    - Coca-Cola
+    - 
+    - 10
+    - 4000
+    - coca-cola
+    - 2013-09-05 04:52:30.000000000 Z
+    - 2013-09-05 04:52:30.000000000 Z
+    - cocacola.jpg
+    - 6
+    - 1
+  - - 21
+    - Sprite
+    - 
+    - 10
+    - 4000
+    - sprite
+    - 2013-09-05 04:55:08.000000000 Z
+    - 2013-09-05 04:55:08.000000000 Z
+    - sprite.jpg
+    - 6
+    - 1
+  - - 22
+    - Fanta
+    - 
+    - 10
+    - 4000
+    - fanta
+    - 2013-09-05 04:59:01.000000000 Z
+    - 2013-09-05 04:59:01.000000000 Z
+    - fanta.jpg
+    - 6
+    - 1
+  - - 23
+    - Blue Ocean
+    - 
+    - 10
+    - 25000
+    - blue-ocean
+    - 2013-09-05 05:02:07.000000000 Z
+    - 2013-09-05 05:02:07.000000000 Z
+    - blueocean.jpg
+    - 6
+    - 4
+  - - 24
+    - Es Jeruk
+    - 
+    - 10
+    - 8000
+    - es-jeruk
+    - 2013-09-05 05:05:05.000000000 Z
+    - 2013-09-05 05:05:05.000000000 Z
+    - esjeruk.jpg
+    - 6
+    - 3
+  - - 25
+    - Chic Melted
+    - 
+    - 10
+    - 17500
+    - chic-melted
+    - 2013-09-06 02:02:54.000000000 Z
+    - 2013-09-06 02:07:56.000000000 Z
+    - Chicmelted.jpg
+    - 5
+    - 8
+  - - 26
+    - Spaghetti Carbonara
+    - 
+    - 10
+    - 15000
+    - spaghetti-carbonara
+    - 2013-09-06 02:04:25.000000000 Z
+    - 2013-09-06 02:04:25.000000000 Z
+    - spaghetticarbonara.jpg
+    - 5
+    - 8
+  - - 27
+    - Onion Ring
+    - 
+    - 10
+    - 13000
+    - onion-ring
+    - 2013-09-06 02:05:11.000000000 Z
+    - 2013-09-06 02:05:11.000000000 Z
+    - OnionRing.jpg
+    - 5
+    - 8
+  - - 28
+    - Beef Stroganof
+    - 
+    - 10
+    - 25000
+    - beef-stroganof
+    - 2013-09-06 02:06:13.000000000 Z
+    - 2013-09-06 02:06:13.000000000 Z
+    - beefstroganof.jpg
+    - 5
+    - 8
+
+---
+restaurants:
+  columns:
+  - id
+  - name
+  - address
+  - city
+  - province
+  - slug
+  - created_at
+  - updated_at
+  - user_id
+  - phone
+  - image
+  - district_id
+  records: 
+  - - 1
+    - Rocky
+    - Jl.KH.Syahdan
+    - Jakarta Barat
+    - DKI Jakarta
+    - rocky
+    - 2013-08-01 08:33:40.000000000 Z
+    - 2013-08-27 07:36:52.000000000 Z
+    - 1
+    - 021-99991
+    - rocky.png
+    - 1
+  - - 2
+    - Solaria
+    - Jalan Gatot Subroto
+    - Jakarta
+    - DKI Jakarta
+    - solaria
+    - 2013-08-02 03:16:50.000000000 Z
+    - 2013-08-27 07:40:01.000000000 Z
+    - 
+    - 089230193090132
+    - solaria1.jpg
+    - 3
+  - - 3
+    - Hosana
+    - Jalan KS Tubun
+    - Bogor
+    - Jawa Barat
+    - hosana
+    - 2013-08-02 04:32:06.000000000 Z
+    - 2013-08-27 07:42:04.000000000 Z
+    - 
+    - 021-202101
+    - hosana.jpg
+    - 1
+  - - 4
+    - PHD
+    - Jalan Kemanggisan Raya
+    - Jakarta
+    - Jakarta Barat
+    - phd
+    - 2013-08-02 04:36:29.000000000 Z
+    - 2013-08-26 06:54:53.000000000 Z
+    - 1
+    - 500-400
+    - PHD.jpg
+    - 2
+  - - 5
+    - Bebek Kaleyo
+    - Jl Pemuda Raya
+    - Jakarta Timur
+    - DKI Jakarta
+    - bebek-kaleyo
+    - 2013-08-15 06:15:28.000000000 Z
+    - 2013-08-27 07:43:56.000000000 Z
+    - 
+    - 021-788881
+    - bebekkaleyo.jpg
+    - 1
+  - - 6
+    - Sambara
+    - Jalan mawar
+    - Jakarta
+    - DKI Jakarta
+    - sambara
+    - 2013-08-23 02:19:26.000000000 Z
+    - 2013-08-23 06:54:57.000000000 Z
+    - 
+    - 08780021020
+    - sambara.jpg
+    - 1
+  - - 7
+    - Bonex 69
+    - Jalan Raya Padjajaran
+    - Jakarta Barat
+    - DKI Jakarta
+    - bonex-69
+    - 2013-08-27 07:16:25.000000000 Z
+    - 2013-08-27 07:47:50.000000000 Z
+    - 
+    - 021-788999
+    - bonex69.jpg
+    - 5
+  - - 8
+    - Ciz n' Chic
+    - Jalan U no. 33 Kemanggisan
+    - Jakarta Barat
+    - DKI Jakarta
+    - ciz-n-chic
+    - 2013-09-06 02:00:51.000000000 Z
+    - 2013-09-06 02:00:51.000000000 Z
+    - 
+    - 021-928-67793
+    - Ciznchic.jpg
+    - 3
+
+---
+users:
+  columns:
+  - id
+  - email
+  - encrypted_password
+  - reset_password_token
+  - reset_password_sent_at
+  - remember_created_at
+  - sign_in_count
+  - current_sign_in_at
+  - last_sign_in_at
+  - current_sign_in_ip
+  - last_sign_in_ip
+  - created_at
+  - updated_at
+  - name
+  - address
+  - confirmation_token
+  - confirmed_at
+  - confirmation_sent_at
+  - unconfirmed_email
+  - is_admin
+  records: 
+  - - 3
+    - adlianugrah@yahoo.com
+    - $2a$10$BhSf9QstYaOWoLH4J9KPmeAQFW3eHl55UTqOHp0NfE/zXbuHrqOL.
+    - 
+    - 
+    - 
+    - 38
+    - 2013-09-06 01:52:21.000000000 Z
+    - 2013-09-05 02:44:28.000000000 Z
+    - 127.0.0.1
+    - 127.0.0.1
+    - 2013-08-15 06:51:08.000000000 Z
+    - 2013-09-06 01:52:21.000000000 Z
+    - Adli Anugrah
+    - Jl Tanjung Duren Raya
+    - 
+    - 2013-08-23 02:07:41.000000000 Z
+    - 2013-08-23 02:07:16.000000000 Z
+    - 
+    - true
+  - - 4
+    - soleh@yahoo.com
+    - $2a$10$nHabrPRn21Xm7VRY2cOhOeOdx2AW3QfrrjlAc70iiFl5wijTGcEqO
+    - 
+    - 
+    - 
+    - 2
+    - 2013-08-20 06:41:36.000000000 Z
+    - 2013-08-19 02:38:58.000000000 Z
+    - 127.0.0.1
+    - 127.0.0.1
+    - 2013-08-19 02:38:58.000000000 Z
+    - 2013-08-20 06:41:36.000000000 Z
+    - soleh solihun
+    - Bekasi Barat
+    - 
+    - 
+    - 
+    - 
+    - false
+  - - 5
+    - aulia@yahoo.com
+    - $2a$10$WZvm..nyZzcgMgnE5YvQ2uRE/2ety.kJQFZ6Y2Oe6i4ddQjkUsu32
+    - 
+    - 
+    - 
+    - 1
+    - 2013-08-21 02:34:01.000000000 Z
+    - 2013-08-21 02:34:01.000000000 Z
+    - 127.0.0.1
+    - 127.0.0.1
+    - 2013-08-21 02:34:00.000000000 Z
+    - 2013-08-21 02:34:01.000000000 Z
+    - aulia
+    - ''
+    - 
+    - 
+    - 
+    - 
+    - false
+  - - 8
+    - agus00@yahoo.com
+    - $2a$10$sghKlAk9bTFb6awZBEqCn.5Zey2UN2Bv1aJYu9cr4lxG19KjRjsvu
+    - 
+    - 
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 
+    - 2013-08-21 04:44:55.000000000 Z
+    - 2013-08-21 04:44:55.000000000 Z
+    - ''
+    - ''
+    - GS1ha8d6bpRxLx2SzzCs
+    - 
+    - 2013-08-21 04:44:55.000000000 Z
+    - 
+    - false
+  - - 9
+    - raka@yahoo.com
+    - $2a$10$Z2Lsd/vYcABZUq.z5xLPpezCGAvDCzsQHaFlyXfdNfla.37JYR.d6
+    - 
+    - 
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 
+    - 2013-08-22 07:17:18.000000000 Z
+    - 2013-08-22 07:17:18.000000000 Z
+    - raka
+    - jl barat
+    - Fxmpjhjs13kytmFRmXDr
+    - 
+    - 2013-08-22 07:17:18.000000000 Z
+    - 
+    - false
+  - - 10
+    - sotong@bongol.com
+    - $2a$10$K08qNH7TSWaRJ9TIwSF6he2pGit4GPdLCi/dOxRrb1ZbjdF5WCEuG
+    - 
+    - 
+    - 
+    - 5
+    - 2013-08-22 07:50:56.000000000 Z
+    - 2013-08-22 07:38:33.000000000 Z
+    - 127.0.0.1
+    - 127.0.0.1
+    - 2013-08-22 07:35:24.000000000 Z
+    - 2013-08-22 07:50:56.000000000 Z
+    - Sotong
+    - Bekasi Selatan
+    - 
+    - 2013-08-22 07:35:41.000000000 Z
+    - 2013-08-22 07:35:24.000000000 Z
+    - 
+    - false
+  - - 11
+    - bintang@yahoo.com
+    - $2a$10$4SMDQC9tX0uj2y95GpX3CubU5sNIGNSzmXDog34odlp7RrCEWt1o.
+    - 
+    - 
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 
+    - 2013-08-23 02:05:00.000000000 Z
+    - 2013-08-23 02:05:00.000000000 Z
+    - bintang
+    - rawabelong
+    - ssAZxSsi5Bin82sxkQUr
+    - 
+    - 2013-08-23 02:05:00.000000000 Z
+    - 
+    - false
+  - - 12
+    - ucing@yahoo.com
+    - $2a$10$.GH3OT.FQa/lRVXCzjgNpOvNNOlA7.G9OQ4gduVC2b0BGGzPb.K/K
+    - 
+    - 
+    - 
+    - 4
+    - 2013-09-04 03:16:05.000000000 Z
+    - 2013-09-04 03:13:16.000000000 Z
+    - 127.0.0.1
+    - 127.0.0.1
+    - 2013-09-04 03:01:57.000000000 Z
+    - 2013-09-04 03:16:05.000000000 Z
+    - ucing
+    - jl keramat
+    - 
+    - 2013-09-04 03:02:32.000000000 Z
+    - 2013-09-04 03:01:57.000000000 Z
+    - 
+    - true
+  - - 13
+    - andreas@yahoo.com
+    - $2a$10$wi4ca6ln/dt8cEVNUGWng.Q.5NZhbmZWfDJ3PwCkeBziSHgaSPWfe
+    - 
+    - 
+    - 
+    - 1
+    - 2013-09-05 17:38:33.000000000 Z
+    - 2013-09-05 17:38:33.000000000 Z
+    - 127.0.0.1
+    - 127.0.0.1
+    - 2013-09-05 17:38:18.000000000 Z
+    - 2013-09-05 17:38:33.000000000 Z
+    - Andreas
+    - Jl duren
+    - 
+    - 2013-09-05 17:38:33.000000000 Z
+    - 2013-09-05 17:38:18.000000000 Z
+    - 
+    - false
